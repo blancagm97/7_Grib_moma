@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8_grid</title>
+    <style>
+        :root{
+            --blau:#00AFD7;
+            --vermell: #FF3000;
+            --groc: #FFCD00;
+            --gris: #EEEEEE;
+        }
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+        }
+        
+        img{
+            width: 100%;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 250px);
+        }
+        .expos{
+            font-weight: 900;
+        }
+        .expos img{
+            object-fit: cover;
+            height: 100%;
+        }
+        .ex1{
+            background: var(--blau);
+        }
+        .ex4{
+            background: var(--groc);
+        }
+        .ex5{
+            background: black;
+            color: white;
+        }
+        .ex8{
+            background: var(--gris)
+        }
+        .ex1, .ex4, .ex5, .ex8{
+            display: flex;
+            flex-direction: column;
+            grid-column: span 2;
+            padding: 2em 3em;
+        }
+        .ex2, .ex3, .ex6, .ex7{
+            grid-column: span 3;
+        }
+        h1{
+            font-size: 2.5em;
+            line-height: 0.97;
+            flex-grow: 1;
+        }
+        h2{
+            font-size: 1.2em;
+        }
+      
+    </style>
+   
+</head>
+<body>
+    <div class="container">
+        <div class="expos ex1">
+            <h1>Fake Games. El monumento colectivizado. Fernando Sánchez Castillo</h1>
+            <h2>14 Noviembre 2019-01 Marzo 2020</h2>
+        </div>
+        <div class="expos ex2">
+            <img src="img/1..jpg" alt="ex2">
+        </div>
+        <div class="expos ex3">
+            <img src="img/2..jpg" alt="ex3">
+        </div>
+        <div class="expos ex4">
+            <h1>ZINEB SEDIRA</h1>
+            <h2>30 Octubre 2019-26 Enero 2020</h2>
+        </div>
+        <div class="expos ex5">
+            <h1>JEAN DUBUFFET. UN BÁRBARO EN EUROPA</h1>
+            <h2>08 Octubre 2019-16 Febrero 2020</h2>
+        </div>
+        <div class="expos ex6">
+            <img src="img/3..jpg" alt="ex6">
+            </div>
+        <div class="expos ex7">
+        <img src="img/4.jpg" alt="ex7">
+        </div>
+        <div class="expos ex8">
+            <h1>Reinventando la representación: Arte holandés de entreguerras</h1>
+            <h2>25 Septiembre 2019-19 Enero 2020</h2>
+        </div>
+    </div>
+    
+</body>
+</html>
